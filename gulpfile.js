@@ -97,6 +97,13 @@ gulp.task('image-min', function(){
 		.pipe(gulp.dest('./public/images'))
 })
 
+// 上傳到原有的 Github 內產生 gh-pages 分支
+// 上傳後即可用網址觀看
+gulp.task('deploy', function () {
+	return gulp.src('./public/**/*')
+		.pipe($.ghPages());
+});
+
 // 虛擬伺服器開在指定路徑下
 gulp.task('bower-sync', function(){
 	browserSync.init({
