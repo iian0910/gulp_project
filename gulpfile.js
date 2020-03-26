@@ -31,6 +31,12 @@ gulp.task('copyHTML', function(){
 		.pipe(browserSync.stream())
 });
 
+// 複製指定檔案 指令：gulp copyFONT
+gulp.task('copyFONT', function () {
+	return gulp.src('./source/font/*')
+		.pipe(gulp.dest('./public/font/'))
+});
+
 // SCSS編譯 指令：gulp sass
 gulp.task('sass', function () {
 	return gulp.src('./source/scss/**/*.scss')
@@ -134,7 +140,7 @@ gulp.task('build'
 		'clean',
 		'bower',
 		'vendorJS',
-		gulp.parallel('copyHTML', 'sass', 'babel', 'image-min')
+		gulp.parallel('copyHTML', 'copyFONT', 'sass', 'babel', 'image-min')
 	)
 )
 
@@ -143,7 +149,7 @@ gulp.task('default'
 		'clean',
 		'bower',
 		'vendorJS',
-		gulp.parallel('copyHTML', 'sass', 'babel', 'image-min'),
+		gulp.parallel('copyHTML', 'copyFONT', 'sass', 'babel', 'image-min'),
 		function(done){
 			// gulp 4.0 browserSync 指令寫法
 			browserSync.init({
