@@ -89,8 +89,8 @@ gulp.task('vendorJS', function(){
 
 // 圖片壓縮
 gulp.task('image-min', function(){
-	return gulp.src('./source/images/*')
-		.pipe($.if(options.env === 'productino', $.imagemin()))
+	return gulp.src('./source/images/**/*')
+		.pipe($.if(options.env === 'production', $.imagemin()))
 		.pipe(gulp.dest('./public/images'))
 })
 
