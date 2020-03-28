@@ -1,1 +1,1 @@
-{"version":3,"sources":["all.js","all2.js"],"names":["newFunc","console","newFunc2"],"mappings":"aAAA,IAAIA,QAAU,aACbC,UCDD,IAAIC,SAAW,aAGfA","file":"all.js","sourcesContent":["let newFunc = () => {\r\n\tconsole.log('Aa')\r\n}\r\nnewFunc()","let newFunc2 = () => {\r\n\tconsole.log('Bb')\r\n}\r\nnewFunc2()"]}
+{"version":3,"sources":["all.js"],"names":["newFunc","console"],"mappings":"aAAA,IAAIA,QAAU,aACbC","file":"all.js","sourcesContent":["let newFunc = () => {\r\n\tconsole.log('Aa')\r\n}\r\nnewFunc()"]}

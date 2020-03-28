@@ -1,2 +1,2 @@
-"use strict";var newFunc=function(){};newFunc();var newFunc2=function(){};newFunc2();
+"use strict";var newFunc=function(){};newFunc();
 //# sourceMappingURL=all.js.map
